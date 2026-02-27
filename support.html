@@ -347,6 +347,19 @@
 
 <main>
 
+  <!-- WHAT'S NEW IN V1.1 -->
+  <div style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.03)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 24px 28px; margin-bottom: 48px;">
+    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #D4AF37; margin-bottom: 16px; font-weight: 600;">✦ What's New in v1.1</div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Qazaa Mode indicator when browsing past dates</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Fixed year &amp; month percentage calculation</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Auto-returns to today after 1 minute in background</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>New option: tap checkbox only to mark prayers</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Confetti celebration when you complete all 5 prayers 🎉</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Import &amp; Export prayer data as CSV</li>
+    </ul>
+  </div>
+
   <!-- GETTING STARTED -->
   <div class="faq-group" id="getting-started">
     <h2>Getting Started</h2>
@@ -424,11 +437,39 @@
         <p>Found in <strong>Settings → Prayer Tracking</strong>, this toggle shows or hides the ability to mark prayers as skipped on the Prayers tab. It's off by default — when off, prayers can only be marked as completed or incomplete. Enable it if you want to track prayers you intentionally skipped.</p>
       </div>
     </details>
+
+    <details>
+      <summary>Can I tap just the checkbox instead of the whole row?</summary>
+      <div class="faq-body">
+        <p>Yes — go to <strong>Settings → Prayer Tracking → Tap Checkbox to Mark</strong>. When enabled, only tapping the checkbox on the right marks the prayer; tapping the rest of the row does nothing. This is useful on smaller devices where accidental taps can occur. The default is automatically set based on your device size.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why does the app jump back to today when I return to it?</summary>
+      <div class="faq-body">
+        <p>If you leave the app for more than 1 minute and come back, it automatically navigates to today. This prevents accidentally logging prayers on the wrong date. You can still manually navigate to any past date using the arrow buttons.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What happens when I complete all 5 prayers?</summary>
+      <div class="faq-body">
+        <p>When you mark the 5th prayer on today's date, a confetti burst animation plays from the progress ring — a small celebration for completing all your prayers! 🎉</p>
+      </div>
+    </details>
   </div>
 
   <!-- QAZAA -->
   <div class="faq-group" id="qazaa">
     <h2>Qazaa Prayers</h2>
+
+    <details>
+      <summary>What is the "Qazaa Mode" indicator?</summary>
+      <div class="faq-body">
+        <p>When you navigate to a past date, a purple <strong>"Qazaa Mode"</strong> pill appears in the header where the location is normally shown. It's a clear reminder that you're viewing a past date and logging qazaa prayers — not today's prayers.</p>
+      </div>
+    </details>
 
     <details>
       <summary>What is qazaa and how does Yalla Pray! help?</summary>
@@ -522,6 +563,7 @@
       <summary>How is my completion percentage calculated?</summary>
       <div class="faq-body">
         <p>Each month, the total possible prayers = <strong>number of days you should have prayed × 5</strong>. Partial months (like your first month of praying, or the current month) are handled correctly — only days from your prayer start date up to today are counted.</p>
+        <p>For today specifically, only prayers whose time has already passed are counted in the denominator — future prayers are excluded so your percentage stays accurate throughout the day. If location is unavailable, all 5 prayers are counted for today.</p>
       </div>
     </details>
 
@@ -577,6 +619,50 @@
     </details>
   </div>
 
+  <!-- IMPORT / EXPORT -->
+  <div class="faq-group" id="import-export">
+    <h2>Import &amp; Export</h2>
+
+    <details>
+      <summary>How do I export my prayer data?</summary>
+      <div class="faq-body">
+        <p>Go to <strong>Settings → Export Data</strong>. A CSV file will be generated and a share sheet will appear — save it to Files, email it to yourself, or store it anywhere you like. The filename includes a timestamp so exports never overwrite each other.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What does the CSV file look like?</summary>
+      <div class="faq-body">
+        <p>The file has one row per day with columns: <strong>PROFILE, DATE, FAJR, DHUHR, ASR, MAGHRIB, ISHA</strong>. Values are <strong>Y</strong> (completed), <strong>S</strong> (skipped), or blank (not marked). Rows are ordered by date, oldest first.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I import data?</summary>
+      <div class="faq-body">
+        <p>Go to <strong>Settings → Import Data</strong> and select a previously exported CSV file. You'll see a preview showing the date range and number of prayers to be imported, then choose:</p>
+        <ul>
+          <li><strong>Merge</strong> — overlays imported data on existing data. Only dates in the CSV are updated; all other data is untouched.</li>
+          <li><strong>Replace</strong> — clears all existing prayer data first, then imports the CSV fresh.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I undo an import?</summary>
+      <div class="faq-body">
+        <p>No — imports cannot be undone. We recommend exporting your current data first as a backup before importing anything new.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Will imported data sync to iCloud?</summary>
+      <div class="faq-body">
+        <p>Yes. Since imported data is written through the same SwiftData layer, it syncs to iCloud automatically — just like manually marking prayers. It may take a minute or two for a large import to fully sync across devices.</p>
+      </div>
+    </details>
+  </div>
+
   <div class="divider"></div>
 
   <!-- CONTACT -->
@@ -584,8 +670,18 @@
     <h2>Still need help?</h2>
     <p>Can't find what you're looking for? Send us an email and we'll get back to you as soon as possible.</p>
     <a href="mailto:rijiosapps@gmail.com" class="email-link">rijiosapps@gmail.com</a>
-    <p class="response-note">We typically respond within 1–2 business days.</p>
+    <p class="response-note">We typically respond within 24 hours.</p>
   </div>
 
   <div class="privacy-link">
-    <a href="privacy-policy.html">View Privacy
+    <a href="https://rijiosapps.github.io/yallapray/privacy-policy.html">Privacy Policy</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Mohamed Rijaz · Yalla Pray!
+</footer>
+
+</body>
+</html>
