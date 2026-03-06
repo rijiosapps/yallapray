@@ -347,6 +347,19 @@
 
 <main>
 
+  <!-- WHAT'S NEW IN V1.2 -->
+  <div style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.03)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 24px 28px; margin-bottom: 48px;">
+    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #D4AF37; margin-bottom: 16px; font-weight: 600;">✦ What's New in v1.2</div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Qazaa prompt when completing today's prayers</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>First/Last Missed button follows your Qazaa Direction setting</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Long press month in Stats for a daily calendar view</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Configurable double-tap month navigation destination</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Prayer Start Date option for converts</li>
+      <li style="font-size: 14px; color: rgba(255,255,255,0.88); padding: 5px 0; display: flex; gap: 10px;"><span style="color: #D4AF37; font-size: 10px; margin-top: 5px; flex-shrink: 0;">✦</span>Tips tour — tap ⓘ on Prayers or Stats tab</li>
+    </ul>
+  </div>
+
   <!-- WHAT'S NEW IN V1.1 -->
   <div style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.03)); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 24px 28px; margin-bottom: 48px;">
     <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #D4AF37; margin-bottom: 16px; font-weight: 600;">✦ What's New in v1.1</div>
@@ -456,6 +469,25 @@
       <summary>What happens when I complete all 5 prayers?</summary>
       <div class="faq-body">
         <p>When you mark the 5th prayer on today's date, a confetti burst animation plays from the progress ring — a small celebration for completing all your prayers! 🎉</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What is the One-for-One Qazaa Prompt?</summary>
+      <div class="faq-body">
+        <p>When enabled in <strong>Settings → Prayer Tracking</strong>, marking a prayer complete on today's date will show a prompt asking how many missed prayers of the same name you also prayed. Use the stepper to enter the number and tap Confirm — those qazaa prayers are marked automatically. A 5-second undo option appears after confirming.</p>
+        <p>This only triggers on today's date and only when marking complete — not via the Mark All Complete button.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What is Qazaa Direction and how does it affect the missed prayer button?</summary>
+      <div class="faq-body">
+        <p>Found in <strong>Settings → Prayer Tracking</strong>, Qazaa Direction controls two things:</p>
+        <ul>
+          <li>Which missed prayers the One-for-One Qazaa Prompt marks first — oldest or most recent</li>
+          <li>The label and behaviour of the missed prayer navigation button — <strong>Last Missed</strong> (most recent first, default) or <strong>First Missed</strong> (oldest first)</li>
+        </ul>
       </div>
     </details>
   </div>
@@ -581,7 +613,14 @@
     <details>
       <summary>Can I navigate to a specific month from Prayer History?</summary>
       <div class="faq-body">
-        <p>Yes — <strong>double tap any month circle</strong> in the Prayer History tab to jump directly to that month in the Prayers tab.</p>
+        <p>Yes — <strong>double-tap any month circle</strong> in the Stats tab to navigate to it in the Prayers tab. You can configure where it lands in <strong>Settings → Stats → Double-tap Month Navigates To</strong>: first day of month (default), first completed day, or last completed day.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I see a daily breakdown for a specific month?</summary>
+      <div class="faq-body">
+        <p>Yes — <strong>long press any month circle</strong> to open a calendar view for that month. Each day shows a mini completion ring. Tap any day to navigate straight to it in the Prayers tab.</p>
       </div>
     </details>
   </div>
@@ -659,6 +698,30 @@
       <summary>Will imported data sync to iCloud?</summary>
       <div class="faq-body">
         <p>Yes. Since imported data is written through the same SwiftData layer, it syncs to iCloud automatically — just like manually marking prayers. It may take a minute or two for a large import to fully sync across devices.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- TIPS & GESTURES -->
+  <div class="faq-group" id="tips">
+    <h2>Tips &amp; Gestures</h2>
+
+    <details>
+      <summary>What is the Tips Tour?</summary>
+      <div class="faq-body">
+        <p>Tap the <strong>ⓘ icon</strong> in the header of the Prayers or Stats tab to launch a guided tour. It highlights each feature one by one with a short explanation. You can tap Next to advance or Skip to exit. It can be re-launched any time.</p>
+        <p>To hide the ⓘ icon once you're familiar with the app, go to <strong>Settings → Display → Show Tips</strong> and turn it off.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What hidden gestures are in the app?</summary>
+      <div class="faq-body">
+        <ul>
+          <li><strong>Shake to undo</strong> — shake your device to undo the last prayer state change</li>
+          <li><strong>Double-tap month</strong> — jump to that month in the Prayers tab</li>
+          <li><strong>Long press month</strong> — see a daily calendar view with completion rings</li>
+        </ul>
       </div>
     </details>
   </div>
